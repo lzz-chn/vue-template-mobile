@@ -10,11 +10,13 @@ axios.defaults.baseURL = process.env.VUE_APP_API
 // 请求拦截器
 axios.interceptors.request.use(
     config => {
+        store.state.loading = true // 开启加载遮罩
         return config
     },
     error => {
         Toast.fail('请求异常')
         console.log('请求异常 :', error)
+        store.state.loading = false // 关闭加载遮罩
         return Promise.error(error)
     }
 )
@@ -27,11 +29,13 @@ axios.interceptors.response.use(
         // } else {
         //     return Promise.reject(response);
         // }
+        store.state.loading = false // 关闭加载遮罩
         return Promise.resolve(response)
     },
     error => {
         Toast.fail('响应异常')
         console.log('响应异常 :', error)
+        store.state.loading = false // 关闭加载遮罩
         return Promise.reject(error)
     }
 )

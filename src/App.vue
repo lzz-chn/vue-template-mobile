@@ -15,8 +15,8 @@ export default {
     margin: 0;
     padding: 0;
     list-style: none;
+    outline: none;
     box-sizing: border-box;
-    font-weight: 400;
 
     /*滚动条整体样式*/
     // &::-webkit-scrollbar {
