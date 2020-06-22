@@ -9,7 +9,7 @@ module.exports = {
     productionSourceMap: false, // 生产环境是否生成 sourceMap 文件
     devServer: {
         // disableHostCheck: true, // 允许内网穿透
-        // port: 8080, // 端口
+        port: 30000, // 端口
         // proxy: {
         //     '/api': {
         //         target: 'https://www.easy-mock.com/mock', // 目标代理接口地址
