@@ -44,5 +44,7 @@ a {
     text-decoration: none;
 }
 #app {
+    height: 100%;
+    overflow: auto;
 }
 </style>

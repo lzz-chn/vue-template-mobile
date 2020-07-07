@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import App from './App.vue';
-import router from './router/';
+import router from './router';
 import store from './store';
-import './plugins/axios';
-import './plugins/vant.js'
+import './api/axios'
+import './plugins/vant'
 
 Vue.config.productionTip = false;
 
